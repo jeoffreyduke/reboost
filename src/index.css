@@ -21,3 +21,9 @@ code {
 * {
   box-sizing: border-box;
 }
+
+button {
+  background-color: var(--color-primary);
+  border: none;
+  cursor: pointer;
+}

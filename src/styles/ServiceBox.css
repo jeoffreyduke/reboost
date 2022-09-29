@@ -1,0 +1,59 @@
+.ServiceBox {
+  height: 28rem;
+  width: 30rem;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 0.4rem;
+}
+
+.serviceBoxCon {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 2rem 2.5rem;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.boxTitle {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+
+  margin-bottom: 3rem;
+}
+
+.boxTitle > h3 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #000;
+}
+
+.boxTitle > img {
+  width: 3rem;
+  height: 3rem;
+}
+
+.boxTxt {
+  position: relative;
+  bottom: 4rem;
+  font-size: 0.85rem;
+  color: #000;
+  line-height: 23px;
+}
+
+.boxBtn {
+  position: relative;
+  bottom: 3rem;
+}
+
+.boxBtn > button {
+  width: 9rem;
+  height: 3.7rem;
+  font-size: 0.94rem;
+  color: #fff;
+  padding: 0.5rem 1rem;
+  border-radius: 0.3rem;
+  box-shadow: 3.6px 3.6px 12.6px rgba(17, 60, 252, 0.3);
+}
