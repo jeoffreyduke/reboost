@@ -1,0 +1,9 @@
+.firstSection {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 90vh;
+  width: 100vw;
+  background-image: url(../../public/assets/banner.png);
+  border: 1px solid #000;
+}
