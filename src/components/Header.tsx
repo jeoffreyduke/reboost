@@ -1,16 +1,21 @@
 import React, { useState, useRef } from "react";
 import gsap from "gsap"; // we will use gsap for animations
 import "../styles/Header.css";
+import Footer from "./Footer";
 
 const Header = () => {
-  const [menuOpen, setMenuOpen] = useState(false);
   const navRef = useRef<HTMLDivElement>(null);
   const endRef = useRef<HTMLDivElement>(null);
+  const closeRef = useRef<HTMLDivElement>(null);
+  const dropDownRef = useRef<HTMLDivElement>(null);
+  const dropIconRef = useRef<SVGSVGElement>(null);
+
+  const [open, setOpen] = useState(false);
 
   // we will show the menu when the hamburger icon is clicked
   const handleShowNav = () => {
     gsap.to(endRef.current, {
-      duration: 0.5,
+      duration: 0.4,
       x: -230,
       ease: "power3.inOut",
     });
@@ -19,14 +24,17 @@ const Header = () => {
       width: "32.5vw",
       ease: "power4.inOut",
     });
-
-    setMenuOpen(true);
+    gsap.to(closeRef.current, {
+      duration: 0.8,
+      display: "block",
+      ease: "power4.inOut",
+    });
   };
 
   // we will hide the menu when the close icon is clicked
   const handleHideNav = () => {
     gsap.to(endRef.current, {
-      duration: 0.5,
+      duration: 0.4,
       x: 0,
       ease: "power3.inOut",
     });
@@ -35,8 +43,41 @@ const Header = () => {
       width: 0,
       ease: "power4.inOut",
     });
+    gsap.to(closeRef.current, {
+      duration: 0.2,
+      display: "none",
+      ease: "power4.inOut",
+    });
+  };
 
-    setMenuOpen(false);
+  // we will show the dropdown menu when the dropdown icon is clicked
+  const handleDropDown = () => {
+    setOpen(!open);
+
+    // if the dropdown menu is open, we will hide it, otherwise we will show it
+    if (!open) {
+      gsap.to(dropDownRef.current, {
+        duration: 0.3,
+        display: "block",
+        ease: "power4.inOut",
+      });
+      gsap.to(dropIconRef.current, {
+        duration: 0.3,
+        rotate: 180,
+        ease: "power4.inOut",
+      });
+    } else if (open) {
+      gsap.to(dropDownRef.current, {
+        duration: 0.3,
+        display: "none",
+        ease: "power4.inOut",
+      });
+      gsap.to(dropIconRef.current, {
+        duration: 0.3,
+        rotate: 0,
+        ease: "power4.inOut",
+      });
+    }
   };
 
   return (
@@ -55,7 +96,7 @@ const Header = () => {
             viewBox="0 0 30 20"
             fill="none"
             xmlns="http://www.w3.org/2000/svg"
-            onClick={menuOpen ? handleHideNav : handleShowNav}
+            onClick={handleShowNav}
           >
             <path
               fill-rule="evenodd"
@@ -79,16 +120,67 @@ const Header = () => {
         </div>
       </div>
       <nav ref={navRef}>
+        <div className="close" onClick={handleHideNav} ref={closeRef}>
+          <svg
+            width="31"
+            height="31"
+            viewBox="0 0 31 31"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <line
+              x1="29.8834"
+              y1="0.883884"
+              x2="0.88422"
+              y2="29.8831"
+              stroke="white"
+              stroke-width="2.5"
+            />
+            <line
+              x1="0.883883"
+              y1="1.23819"
+              x2="29.8831"
+              y2="30.2374"
+              stroke="white"
+              stroke-width="2.5"
+            />
+          </svg>
+        </div>
         <ul>
           <li>Home</li>
-          <li>Services</li>
+          <li onClick={handleDropDown}>
+            Services
+            <span>
+              <svg
+                width="20"
+                height="12"
+                viewBox="0 0 20 12"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+                ref={dropIconRef}
+              >
+                <path
+                  d="M2 2L10 10L18 2"
+                  stroke="white"
+                  stroke-width="2.5"
+                  stroke-linecap="round"
+                />
+              </svg>
+            </span>
+            <div className="dropDown" ref={dropDownRef}>
+              <p>UI/UX Design</p>
+              <p>Web Development</p>
+              <p>Branding & Social Media</p>
+              <p>SEO & Copywriting</p>
+            </div>
+          </li>
           <li>About Us</li>
           <li>Work</li>
           <li>Career</li>
           <li>Sign Up / Login</li>
         </ul>
 
-        <footer></footer>
+        <Footer />
       </nav>
     </header>
   );

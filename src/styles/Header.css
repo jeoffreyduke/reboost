@@ -45,6 +45,9 @@ header {
 }
 
 nav {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
   position: sticky;
   top: 0;
   right: 0;
@@ -59,9 +62,54 @@ nav > ul {
   color: #fff;
   font-size: 2rem;
   font-weight: 600;
-  padding-top: 2rem;
+  padding-top: 2.5rem;
+}
+
+.close {
+  display: none;
+  position: absolute;
+  top: 2.5rem;
+  right: 2.5rem;
+  cursor: pointer;
 }
 
 nav > ul > li {
   margin-bottom: 1rem;
+  cursor: pointer;
+}
+
+nav > ul > li:hover {
+  letter-spacing: 0.25rem;
+  transition: 0.8s ease-in-out;
+}
+
+nav > ul > li > span {
+  position: relative;
+  bottom: 0.3rem;
+  left: 1rem;
+}
+
+.dropDown {
+  display: none;
+  font-size: 1rem;
+  font-weight: 400;
+}
+
+footer {
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+  bottom: 5.2rem;
+  left: 3rem;
+  width: 28%;
+}
+
+footer > div {
+  cursor: pointer;
+}
+
+/* move divs up on hover */
+footer > div:hover {
+  transform: translateY(-0.35rem);
+  transition: 0.2s ease-in-out;
 }
