@@ -128,20 +128,20 @@ const Header = () => {
             ref={hamburgerRef}
           >
             <path
-              fill-rule="evenodd"
-              clip-rule="evenodd"
+              fillRule="evenodd"
+              clipRule="evenodd"
               d="M30 2.06897H0V0H30V2.06897Z"
               fill="white"
             />
             <path
-              fill-rule="evenodd"
-              clip-rule="evenodd"
+              fillRule="evenodd"
+              clipRule="evenodd"
               d="M30 11.0345H0V8.96551H30V11.0345Z"
               fill="white"
             />
             <path
-              fill-rule="evenodd"
-              clip-rule="evenodd"
+              fillRule="evenodd"
+              clipRule="evenodd"
               d="M30 20H0V17.931H30V20Z"
               fill="white"
             />
@@ -163,7 +163,7 @@ const Header = () => {
               x2="0.88422"
               y2="29.8831"
               stroke="white"
-              stroke-width="2.5"
+              strokeWidth="2.5"
             />
             <line
               x1="0.883883"
@@ -171,7 +171,7 @@ const Header = () => {
               x2="29.8831"
               y2="30.2374"
               stroke="white"
-              stroke-width="2.5"
+              strokeWidth="2.5"
             />
           </svg>
         </div>
@@ -191,8 +191,8 @@ const Header = () => {
                 <path
                   d="M2 2L10 10L18 2"
                   stroke="white"
-                  stroke-width="2.5"
-                  stroke-linecap="round"
+                  strokeWidth="2.5"
+                  strokeLinecap="round"
                 />
               </svg>
             </span>

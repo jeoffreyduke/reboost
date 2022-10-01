@@ -2,7 +2,6 @@ import React, { useState, useRef } from "react";
 import gsap from "gsap";
 
 const ThirdSection = () => {
-  // we will create the slideshow here
   const [currentImage, setCurrentImage] = useState(0);
 
   const projectDisplayRef = useRef<HTMLDivElement>(null);
@@ -33,6 +32,7 @@ const ThirdSection = () => {
       { opacity: 1, duration: 2, ease: "power2.inOut" }
     );
 
+    // if it is the last image, go back to the first one
     if (currentImage === images.length - 1) setCurrentImage(0);
     else setCurrentImage(currentImage + 1);
   };
@@ -44,6 +44,7 @@ const ThirdSection = () => {
       { opacity: 1, duration: 2, ease: "power2.inOut" }
     );
 
+    // if it is the first image, go back to the last one
     if (currentImage === 0) setCurrentImage(images.length - 1);
     else setCurrentImage(currentImage - 1);
   };
@@ -65,8 +66,8 @@ const ThirdSection = () => {
                 <path
                   d="M14.5 2L2 14.5L14.5 27"
                   stroke="black"
-                  stroke-width="2.34375"
-                  stroke-linecap="round"
+                  strokeWidth="2.34375"
+                  strokeLinecap="round"
                 />
               </svg>
             </span>
@@ -82,8 +83,8 @@ const ThirdSection = () => {
                 <path
                   d="M2.09375 27L14.5938 14.5L2.09375 2"
                   stroke="black"
-                  stroke-width="2.34375"
-                  stroke-linecap="round"
+                  strokeWidth="2.34375"
+                  strokeLinecap="round"
                 />
               </svg>
             </span>
