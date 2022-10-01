@@ -1,6 +1,5 @@
-Quit clone of the Reboost site. It was really fun coding this!
+Quick and tiny clone of the Reboost site. It was really fun speed-coding this!
 
-
-![Screenshot 2022-10-01 at 03-06-17 Reboost](https://user-images.githubusercontent.com/85391775/193378929-4958a961-02a3-46eb-9e1f-fe53fb1f4ada.png)
+![Screenshot 2022-10-01 at 03-09-23 Reboost](https://user-images.githubusercontent.com/85391775/193378992-9dd93934-a154-458b-a225-1a2dc4871a8a.png)
 
 Built with React, Typescript and gsap.
