@@ -80,6 +80,7 @@
   width: 62rem;
 }
 
+.thirdSectionHeader > h2,
 .secondSectionCon > h2 {
   font-size: 2.5rem;
   font-weight: 600;
@@ -99,4 +100,636 @@
   display: flex;
   gap: 1.6rem;
   flex-wrap: wrap;
+}
+
+/* third section */
+.thirdSectionCon {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 5rem;
+}
+
+.thirdSectionHeader {
+  display: flex;
+  justify-content: space-between;
+  width: 62rem;
+  margin-bottom: 2rem;
+}
+
+.controls {
+  display: flex;
+  gap: 2rem;
+  margin-top: 4.5rem;
+}
+
+.controls > span {
+  cursor: pointer;
+}
+
+.projectDisplayCon {
+  width: 85vw;
+  height: 33rem;
+  display: flex;
+  flex-wrap: nowrap;
+  overflow: hidden;
+  gap: 1.6rem;
+}
+
+.projectDisplay {
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+  width: 100%;
+  height: 100%;
+  color: #fff;
+  background-size: cover;
+  background-position: center;
+  box-shadow: inset 0 0 0 2000px rgba(0, 0, 0, 0.2);
+  padding-right: 1.3rem;
+  text-align: end;
+}
+
+.projectName {
+  position: relative;
+  bottom: 1rem;
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+
+.projectDisplay:hover {
+  box-shadow: inset 0 0 0 2000px rgba(0, 0, 0, 0.4);
+  transition: 0.5s ease-in-out;
+}
+
+/* fourth section */
+.fourthSection {
+  display: flex;
+  height: 85vh;
+  width: 100vw;
+  color: #fff;
+  background: linear-gradient(100.72deg, #5c75e3 -5.66%, #113cfc 107.11%);
+  padding: 2rem 10rem;
+  margin-bottom: 5rem;
+}
+
+.visitBlog,
+.visitBlogImg,
+.aboutLogo,
+.aboutUs {
+  width: 50%;
+}
+
+.visitBlog > h2,
+.aboutUs > h2 {
+  font-size: 2.5rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+
+.visitBlog > p,
+.aboutUs > p {
+  width: 30rem;
+  font-size: 0.85rem;
+  font-weight: 400;
+  line-height: 23px;
+  margin-bottom: 2rem;
+}
+
+.aboutUsBtn {
+  width: 10rem;
+  height: 3.7rem;
+  font-size: 0.94rem;
+  color: #000;
+  background-color: #fff;
+  padding: 0.5rem 1rem;
+  border-radius: 0.3rem;
+  box-shadow: 3.6px 3.6px 12.6px rgba(17, 60, 252, 0.3);
+  margin-top: 1rem;
+}
+
+.visitBlogImg,
+.aboutLogo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-left: 12rem;
+}
+
+/* fifth section */
+.fifthSection {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  margin-bottom: 15rem;
+}
+
+.fifthSectionCon {
+  display: flex;
+  width: 83vw;
+  height: 30rem;
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  box-shadow: 6px 6px 62px rgba(0, 0, 0, 0.09);
+  border-radius: 50px;
+}
+
+.visitBlog {
+  padding: 7rem 5rem;
+}
+
+.visitBlog > h2 {
+  margin-bottom: 2rem;
+}
+
+.visitBlog > p {
+  margin-bottom: 1rem;
+}
+
+.visitBlogImg {
+  padding: 0;
+  background-image: url("/public/assets/blog.jpg");
+  background-size: cover;
+  border-top-right-radius: 50px;
+  border-bottom-right-radius: 50px;
+}
+
+/* sixth section */
+.sixthSection {
+  display: flex;
+  justify-content: center;
+  width: 100vw;
+}
+
+.sixthSectionCon {
+  display: flex;
+  height: 26rem;
+  width: 90%;
+  color: #fff;
+  background: linear-gradient(93.92deg, #506ef1 -6.54%, #113cfc 108.04%);
+  box-shadow: 7px 7px 16px rgba(45, 86, 191, 0.25);
+  border-radius: 50px;
+  padding: 2rem 10rem;
+}
+
+.subscribe {
+  display: flex;
+  flex-direction: column;
+  width: 35%;
+  padding-top: 2rem;
+}
+
+.footerMenu > ul > p,
+.subscribe > p {
+  font-size: 1rem;
+  font-weight: 600;
+  margin-bottom: 1.7rem;
+}
+
+#name,
+#email {
+  height: 2.5rem;
+  width: 15.2rem;
+  font-size: 0.8rem;
+  color: #fff;
+  background-color: transparent;
+  border: none;
+  border-bottom: 1px solid #fff;
+  margin-bottom: 2rem;
+}
+
+.subBtn {
+  width: 6.3rem;
+  height: 1.88rem;
+  font-size: 0.85rem;
+  color: #000;
+  background-color: #fff;
+  padding: 0.4rem 1rem;
+  border-radius: 0.3rem;
+  box-shadow: 3.6px 3.6px 12.6px rgba(17, 60, 252, 0.3);
+}
+
+.footerImg {
+  position: relative;
+  bottom: 5.5rem;
+}
+
+.identity {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 30%;
+}
+
+.identity > img {
+  width: 140px;
+}
+
+.socials {
+  position: relative;
+  top: 6.5rem;
+  right: 3rem;
+  gap: 1.5rem;
+}
+
+footer {
+  width: 9rem !important;
+}
+
+.footerMenu {
+  width: 35%;
+  text-align: end;
+  padding-top: 2rem;
+}
+
+.footerMenu > ul > p {
+  margin-bottom: 2.1rem;
+}
+
+.footerMenu > ul > li {
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: hsla(0, 0%, 100%, 0.7);
+  list-style: none;
+  margin-bottom: 0.5rem;
+  cursor: pointer;
+}
+
+.footerMenu > ul > li:hover {
+  letter-spacing: 1px;
+  transition: 0.8s ease-in-out;
+}
+
+.copyright {
+  margin-top: 2rem;
+  font-size: 0.8rem;
+  font-weight: 400;
+}
+
+/* media queries max width 1400 */
+@media screen and (max-width: 1400px) {
+  .consultCon {
+    top: 72%;
+  }
+
+  .secondSectionCon > h1 {
+    font-size: 3.5rem;
+  }
+
+  .secondSectionCon > p {
+    font-size: 1.2rem;
+  }
+
+  .secondSectionCon > button {
+    width: 10rem;
+    height: 3.7rem;
+    font-size: 1rem;
+  }
+
+  .thirdSectionCon > h1 {
+    font-size: 3.5rem;
+  }
+
+  .thirdSectionCon > p {
+    font-size: 1.2rem;
+  }
+
+  .thirdSectionCon > button {
+    width: 10rem;
+    height: 3.7rem;
+    font-size: 1rem;
+  }
+
+  .fourthSection {
+    height: 100vh;
+  }
+
+  .fourthSectionCon > h1 {
+    font-size: 3.5rem;
+  }
+
+  .fourthSectionCon > p {
+    font-size: 1.2rem;
+  }
+
+  .fourthSectionCon > button {
+    width: 10rem;
+    height: 3.7rem;
+    font-size: 1rem;
+  }
+
+  .fifthSectionCon > h1 {
+    font-size: 3.5rem;
+  }
+
+  .fifthSectionCon > p {
+    font-size: 1rem;
+  }
+}
+
+/* media queries max width 900 */
+@media screen and (max-width: 900px) {
+  .firstSection {
+    padding: 16.5rem 3rem 0 3rem;
+  }
+
+  .bigTxt {
+    width: 75%;
+  }
+
+  .smTxt {
+    width: 78%;
+    color: #f1f1f1;
+    font-size: calc(0.7rem + 0.5vw);
+    line-height: 1.4rem;
+    word-spacing: 1px;
+    margin-top: 3.5rem;
+  }
+  .consultCon {
+    top: 82%;
+  }
+  .secondSection {
+    display: flex;
+    justify-content: center;
+    position: relative;
+    bottom: 6rem;
+    height: fit-content;
+    width: 100vw;
+    background-color: #fff;
+  }
+
+  .secondSectionCon {
+    width: 85%;
+  }
+
+  .thirdSectionHeader {
+    width: 80%;
+    margin-bottom: 2.5rem;
+  }
+
+  .projectDisplay {
+    justify-content: flex-start;
+    align-items: flex-end;
+    padding-right: 0;
+    padding-left: 1rem;
+    text-align: start;
+    font-size: 0.9rem;
+  }
+
+  .projectName {
+    font-size: 1rem;
+  }
+
+  .fourthSection {
+    display: flex;
+    height: 68vh;
+    width: 100vw;
+    color: #fff;
+    background: linear-gradient(100.72deg, #5c75e3 -5.66%, #113cfc 107.11%);
+    padding: 2rem 10rem;
+    margin-bottom: 5rem;
+  }
+
+  .aboutLogo {
+    opacity: 0;
+  }
+
+  .visitBlog {
+    padding: 5rem 2rem;
+  }
+
+  .visitBlog > h2 {
+    margin-bottom: 2rem;
+  }
+
+  .visitBlog > p {
+    width: 15rem;
+    font-size: 0.7rem;
+  }
+
+  .sixthSectionCon {
+    height: 26rem;
+    width: 95%;
+    padding: 2rem 2em;
+  }
+
+  .footerMenu > ul > p,
+  .subscribe > p {
+    font-size: 0.9rem;
+  }
+
+  #name,
+  #email {
+    width: 12.2rem;
+    font-size: 0.7rem;
+  }
+
+  .subBtn {
+    width: 6rem;
+    font-size: 0.65rem;
+  }
+
+  .footerImg {
+    position: relative;
+    bottom: 8.3rem;
+  }
+
+  .footerMenu {
+    width: 35%;
+    text-align: end;
+    padding-top: 2rem;
+  }
+
+  .footerMenu > ul > p {
+    margin-bottom: 2.1rem;
+  }
+
+  .footerMenu > ul > li {
+    font-size: 0.75rem;
+  }
+
+  .footerMenu > ul > li:hover {
+    letter-spacing: 1px;
+    transition: 0.8s ease-in-out;
+  }
+
+  .copyright {
+    font-size: 0.6rem;
+  }
+}
+
+/* media queries max width 400 */
+@media screen and (max-width: 400px) {
+  .firstSection {
+    padding: 6.5rem 3rem 0 3rem;
+  }
+
+  .bigTxt {
+    font-size: 2.5rem;
+    width: 100%;
+  }
+
+  .smTxt {
+    width: 100%;
+    color: #f1f1f1;
+    font-size: calc(0.7rem + 0.5vw);
+    line-height: 1.4rem;
+    word-spacing: 1px;
+    margin-top: 3.5rem;
+  }
+
+  .findMoreBtn > button {
+    width: 100%;
+    height: 2.5rem;
+    font-size: 0.9rem;
+  }
+
+  .consultCon {
+    display: none;
+  }
+
+  .secondSectionCon {
+    width: 80%;
+  }
+
+  .thirdSectionHeader > h2,
+  .secondSectionCon > h2 {
+    font-size: 1.5rem;
+    margin-top: 4.5rem;
+  }
+
+  .services {
+    font-size: 0.7rem;
+  }
+
+  .content {
+    min-width: 80%;
+  }
+
+  .thirdSectionHeader {
+    width: 80%;
+    margin-bottom: 2.5rem;
+  }
+
+  .projectDisplay {
+    justify-content: flex-start;
+    align-items: flex-end;
+    padding-right: 0;
+    padding-left: 1rem;
+    text-align: start;
+    font-size: 0.9rem;
+  }
+
+  .projectName {
+    font-size: 1rem;
+  }
+
+  .fourthSection {
+    padding: 2rem 1rem;
+    margin-bottom: 5rem;
+  }
+
+  .aboutLogo {
+    width: 0%;
+    opacity: 0;
+  }
+
+  .visitBlog > h2,
+  .aboutUs > h2 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+  }
+
+  .visitBlog > p,
+  .aboutUs > p {
+    width: 90vw;
+    font-size: 0.7rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .aboutUsBtn {
+    width: 7rem;
+    height: 2.5rem;
+    font-size: 0.7rem;
+  }
+
+  .visitBlogImg,
+  .aboutLogo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-left: 12rem;
+  }
+
+  .fifthSection {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    margin-bottom: 15rem;
+  }
+
+  .fifthSectionCon {
+    display: flex;
+    width: 100vw;
+    height: 30rem;
+    border: 1px solid rgba(0, 0, 0, 0.08);
+    box-shadow: 6px 6px 62px rgba(0, 0, 0, 0.09);
+    border-radius: 50px;
+  }
+
+  .visitBlog {
+    padding: 7rem 1rem;
+    width: 80vw;
+  }
+
+  .visitBlog > h2 {
+    margin-bottom: 2rem;
+  }
+
+  .visitBlog > p {
+    font-size: 0.7rem;
+    margin-bottom: 1rem;
+  }
+
+  .visitBlogImg {
+    display: none;
+  }
+
+  .sixthSectionCon {
+    height: 26rem;
+    width: 95%;
+    padding: 2rem 1em;
+  }
+
+  .footerMenu > ul > p,
+  .subscribe > p {
+    font-size: 0.7rem;
+    padding-top: 4rem;
+  }
+
+  #name,
+  #email {
+    width: 12.2rem;
+    font-size: 0.5rem;
+  }
+
+  .subBtn {
+    height: 1.5rem;
+    width: 4rem;
+    font-size: 0.48rem;
+  }
+
+  .footerImg {
+    display: none;
+  }
+
+  .footerMenu > ul > li {
+    font-size: 0.65rem;
+  }
+
+  .copyright {
+    font-size: 0.5rem;
+  }
 }

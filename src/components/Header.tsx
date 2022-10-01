@@ -1,9 +1,14 @@
-import React, { useState, useRef } from "react";
+import React, { useState, useRef, useEffect } from "react";
 import gsap from "gsap"; // we will use gsap for animations
+import { ScrollTrigger } from "gsap/ScrollTrigger";
 import "../styles/Header.css";
 import Footer from "./Footer";
 
 const Header = () => {
+  gsap.registerPlugin(ScrollTrigger); // register ScrollTrigger plugin
+
+  const logoRef = useRef<HTMLImageElement>(null);
+  const hamburgerRef = useRef<SVGSVGElement>(null);
   const navRef = useRef<HTMLDivElement>(null);
   const endRef = useRef<HTMLDivElement>(null);
   const closeRef = useRef<HTMLDivElement>(null);
@@ -11,6 +16,29 @@ const Header = () => {
   const dropIconRef = useRef<SVGSVGElement>(null);
 
   const [open, setOpen] = useState(false);
+
+  // we are going to use scrolltrigger to animate the logo
+  useEffect(() => {
+    gsap.to(logoRef.current, {
+      scrollTrigger: {
+        trigger: document.body.querySelector(".secondSection"),
+        start: "top top",
+        end: "bottom top",
+        scrub: true,
+      },
+      attr: { src: "/assets/blackLogo.png" },
+    });
+    // we are going to use scrolltrigger to animate the hamburger to black
+    gsap.to(hamburgerRef.current?.children!, {
+      scrollTrigger: {
+        trigger: document.body.querySelector(".secondSection"),
+        start: "top top",
+        end: "bottom top",
+        scrub: true,
+      },
+      fill: "#000",
+    });
+  }, []);
 
   // we will show the menu when the hamburger icon is clicked
   const handleShowNav = () => {
@@ -21,7 +49,7 @@ const Header = () => {
     });
     gsap.to(navRef.current, {
       duration: 0.4,
-      width: "32.5vw",
+      width: window.innerWidth < 900 ? "100vw" : "32.5vw",
       ease: "power4.inOut",
     });
     gsap.to(closeRef.current, {
@@ -83,7 +111,7 @@ const Header = () => {
   return (
     <header>
       <div className="logo">
-        <img src="/assets/logo.png" alt="logo" />
+        <img src="/assets/logo.png" alt="logo" ref={logoRef} />
       </div>
       <div className="headerEnd" ref={endRef}>
         <div className="contact">
@@ -97,6 +125,7 @@ const Header = () => {
             fill="none"
             xmlns="http://www.w3.org/2000/svg"
             onClick={handleShowNav}
+            ref={hamburgerRef}
           >
             <path
               fill-rule="evenodd"

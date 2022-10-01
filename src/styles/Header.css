@@ -37,6 +37,16 @@ header {
   cursor: pointer;
 }
 
+.contact > button:hover {
+  transform: scale(1.05);
+  box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2);
+  transition: 0.3s ease-in-out;
+}
+
+.navSection {
+  fill: #000 !important;
+}
+
 .navSection > svg {
   position: relative;
   top: 0.4rem;
@@ -112,4 +122,50 @@ footer > div {
 footer > div:hover {
   transform: translateY(-0.35rem);
   transition: 0.2s ease-in-out;
+}
+
+/* media queries max width 1400 */
+@media screen and (max-width: 1400px) {
+  .headerEnd {
+    left: 30%;
+  }
+
+  .contact {
+    position: relative;
+    right: 1.5rem;
+  }
+}
+
+/* media queries max width 900 */
+@media screen and (max-width: 900px) {
+  .logo {
+    display: none;
+  }
+  .headerEnd {
+    padding-top: 1.8rem;
+    left: 93%;
+  }
+  .contact {
+    display: none;
+  }
+  nav > ul {
+    font-size: 1.5rem;
+  }
+  .dropDown {
+    font-size: 0.9rem;
+  }
+}
+
+/* media queries max width 400 */
+@media screen and (max-width: 400px) {
+  .headerEnd {
+    left: 85%;
+    margin-right: 2rem;
+  }
+  nav > ul {
+    font-size: 1rem;
+  }
+  .dropDown {
+    font-size: 0.7rem;
+  }
 }

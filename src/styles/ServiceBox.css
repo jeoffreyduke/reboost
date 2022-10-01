@@ -15,12 +15,18 @@
   border: 1px solid rgba(0, 0, 0, 0.1);
 }
 
+.serviceBoxCon:hover {
+  background-color: #fff;
+  transform: scale(1.03);
+  box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2);
+  transition: 0.5s ease-in-out;
+}
+
 .boxTitle {
   display: flex;
   justify-content: space-between;
   align-items: center;
   width: 100%;
-
   margin-bottom: 3rem;
 }
 
@@ -56,4 +62,63 @@
   padding: 0.5rem 1rem;
   border-radius: 0.3rem;
   box-shadow: 3.6px 3.6px 12.6px rgba(17, 60, 252, 0.3);
+}
+
+/* media queries max width 900 */
+@media screen and (max-width: 900px) {
+  .ServiceBox {
+    height: 22rem;
+    width: 70%;
+  }
+
+  .boxTitle {
+    margin-bottom: 4.5rem;
+  }
+
+  .boxTxt {
+    position: relative;
+    bottom: 4rem;
+    font-size: 0.85rem;
+    color: #000;
+    line-height: 23px;
+  }
+
+  .boxBtn {
+    position: relative;
+    bottom: 1rem;
+  }
+}
+
+/* media queries max width 400 */
+@media screen and (max-width: 400px) {
+  .ServiceBox {
+    height: 31rem;
+    width: 100%;
+  }
+
+  .boxTitle {
+    margin-bottom: 4.5rem;
+  }
+
+  .boxTitle > h3 {
+    font-size: 0.9rem;
+  }
+
+  .boxTxt {
+    font-size: 0.7rem;
+  }
+
+  .boxBtn {
+    bottom: 2rem;
+  }
+
+  .boxBtn > button {
+    width: 6.5rem;
+    height: 2.5rem;
+    font-size: 0.75rem;
+    color: #fff;
+    padding: 0.5rem 1rem;
+    border-radius: 0.3rem;
+    box-shadow: 3.6px 3.6px 12.6px rgba(17, 60, 252, 0.3);
+  }
 }
