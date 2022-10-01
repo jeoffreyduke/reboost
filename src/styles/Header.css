@@ -159,6 +159,7 @@ footer > div:hover {
 /* media queries max width 400 */
 @media screen and (max-width: 400px) {
   .headerEnd {
+    bottom: 0.5rem;
     left: 85%;
     margin-right: 2rem;
   }
